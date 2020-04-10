@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <!-- style="position: absolute; top:0; left: 0; width: 400px; height: 100%; background-color: red" -->
+    <div class="sidebar" >
+        <div class='text' id="originalIntro" >
+          <h1 id="title">Coronavirus (COVID-19) Cases in Philadelphia</h1>
+          <p id="description">This website shows the Coronavirus cases in the Philadelphia City until April 1st. The choropleth shows the number of cases in each zip code. Please click on the Next button to learn more about the condtions of the global pandemic in Philly.</p>
+        </div>
+        <div id="functionalConfig">
+          <button id="nextButton"> Next&raquo;</button>
+          <button id="previousButton" style="display:none;">&laquo;Previous</button>
+          <footer >
+            <a  onkeyup=""href="https://www.phila.gov/programs/coronavirus-disease-2019-covid-19/the-citys-response/monitoring-and-testing/" target="_blank">Data Source</a>
+          </footer>
+        </div>
+        <div class='text' id="PageTwoDetails" style="display:none;">
+          <h1>Positive Numbers in <span class="zip-code">Zip Code</span> is <span class="positives">Positive Number</span></h1>
+          <p class="main">The Zip Code Area is <span class="zip-code">Zip Code</span>.
+            <br>The positive number until April 1st is <span class="positives">Positive Numbers</span>.
+            <br>Please take good care of yourself and your loved ones in this global pandemic.
+          </p>
+
+        </div>
+    </div>
+    <!-- map -->
+    <div id="map" style="position: absolute; top:0; height: 100%; right: 0; left: 400">
+        <h1 style="z-depth:1">IM A MAP</h1>
+    </div>
+    <!-- legend -->
+    <div class='legend'>
+      <div class='legend-title'>Number of Positive Cases</div>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#FFEDA0;'></span>0-5</li>
+          <li><span style='background:#FED976;'></span>5-15</li>
+          <li><span style='background:#FEB24C;'></span>15-30</li>
+          <li><span style='background:#FD8D3C;'></span>30-45</li>
+          <li><span style='background:#FC4E2A;'></span>45-60</li>
+          <li><span style='background:#E31A1C;'></span>>more than 60</li>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="main_workingOn.js"></script>
+  </body>
+</html>
